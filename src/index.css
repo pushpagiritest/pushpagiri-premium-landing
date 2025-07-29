@@ -9,8 +9,8 @@ All colors MUST be HSL.
 @layer base {
   :root {
     /* Premium Real Estate Design System */
-    --background: 210 38% 18%;
-    --foreground: 0 0% 98%;
+    --background: 0 0% 99%;
+    --foreground: 220 26% 14%;
 
     --card: 0 0% 100%;
     --card-foreground: 220 26% 14%;
