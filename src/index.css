@@ -8,35 +8,53 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    /* Premium Real Estate Design System */
+    --background: 0 0% 99%;
+    --foreground: 220 26% 14%;
 
     --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card-foreground: 220 26% 14%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover-foreground: 220 26% 14%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    /* Sophisticated navy as primary */
+    --primary: 220 26% 14%;
+    --primary-foreground: 0 0% 98%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    /* Warm gold accent for luxury feel */
+    --secondary: 45 86% 55%;
+    --secondary-foreground: 220 26% 14%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    /* Soft neutrals */
+    --muted: 220 14% 96%;
+    --muted-foreground: 220 12% 45%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    --accent: 45 86% 55%;
+    --accent-foreground: 220 26% 14%;
 
     --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive-foreground: 0 0% 98%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --border: 220 13% 91%;
+    --input: 220 13% 91%;
+    --ring: 220 26% 14%;
 
-    --radius: 0.5rem;
+    --radius: 0.75rem;
+
+    /* Premium gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(220 26% 14%), hsl(220 26% 18%));
+    --gradient-secondary: linear-gradient(135deg, hsl(45 86% 55%), hsl(45 86% 65%));
+    --gradient-hero: linear-gradient(135deg, hsl(220 26% 14% / 0.95), hsl(220 26% 18% / 0.9));
+
+    /* Elegant shadows */
+    --shadow-elegant: 0 25px 50px -12px hsl(220 26% 14% / 0.25);
+    --shadow-soft: 0 10px 25px -3px hsl(220 26% 14% / 0.1);
+    --shadow-glow: 0 0 0 1px hsl(45 86% 55% / 0.2);
+
+    /* Smooth transitions */
+    --transition-smooth: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bounce: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 
     --sidebar-background: 0 0% 98%;
 
@@ -56,33 +74,33 @@ All colors MUST be HSL.
   }
 
   .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
+    --background: 220 26% 6%;
+    --foreground: 0 0% 98%;
 
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
+    --card: 220 26% 8%;
+    --card-foreground: 0 0% 98%;
 
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
+    --popover: 220 26% 8%;
+    --popover-foreground: 0 0% 98%;
 
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
+    --primary: 0 0% 98%;
+    --primary-foreground: 220 26% 14%;
 
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
+    --secondary: 45 86% 55%;
+    --secondary-foreground: 220 26% 6%;
 
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
+    --muted: 220 26% 12%;
+    --muted-foreground: 220 12% 65%;
 
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
+    --accent: 45 86% 55%;
+    --accent-foreground: 220 26% 6%;
 
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
 
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
+    --border: 220 26% 15%;
+    --input: 220 26% 15%;
+    --ring: 45 86% 55%;
     --sidebar-background: 240 5.9% 10%;
     --sidebar-foreground: 240 4.8% 95.9%;
     --sidebar-primary: 224.3 76.3% 48%;
@@ -100,6 +118,77 @@ All colors MUST be HSL.
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground font-light antialiased;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  /* Smooth scrolling for sections */
+  section {
+    scroll-margin-top: 80px;
+  }
+}
+
+@layer components {
+  /* Premium button variants */
+  .btn-premium {
+    @apply bg-gradient-to-r from-primary to-primary/90 text-primary-foreground px-8 py-4 rounded-lg font-medium transition-all duration-300 hover:scale-105 hover:shadow-xl;
+  }
+
+  .btn-gold {
+    @apply bg-gradient-to-r from-secondary to-secondary/90 text-secondary-foreground px-8 py-4 rounded-lg font-medium transition-all duration-300 hover:scale-105 hover:shadow-xl;
+  }
+
+  .btn-outline-premium {
+    @apply border-2 border-primary/20 text-primary bg-transparent px-8 py-4 rounded-lg font-medium transition-all duration-300 hover:bg-primary hover:text-primary-foreground hover:border-primary;
+  }
+
+  /* Floating CTA button */
+  .floating-cta {
+    @apply fixed bottom-6 right-6 z-50 bg-gradient-to-r from-secondary to-secondary/90 text-secondary-foreground px-6 py-3 rounded-full font-medium shadow-lg transition-all duration-300 hover:scale-110 hover:shadow-xl;
+  }
+
+  /* Elegant card styles */
+  .card-premium {
+    @apply bg-card/80 backdrop-blur-sm border border-border/50 rounded-2xl p-8 transition-all duration-500 hover:shadow-2xl hover:border-secondary/30;
+  }
+
+  /* Section spacing */
+  .section-padding {
+    @apply py-20 px-4 sm:px-6 lg:px-8;
+  }
+
+  /* Hero gradient overlay */
+  .hero-overlay {
+    @apply absolute inset-0 bg-gradient-to-r from-primary/95 via-primary/90 to-primary/95 z-10;
+  }
+
+  /* Fade in animation */
+  .fade-in {
+    @apply opacity-0 translate-y-6 transition-all duration-700 ease-out;
+  }
+
+  .fade-in.visible {
+    @apply opacity-100 translate-y-0;
+  }
+
+  /* Stats counter animation */
+  .stat-number {
+    @apply text-4xl md:text-5xl font-bold text-secondary;
+  }
+
+  /* Premium typography */
+  .heading-primary {
+    @apply text-4xl md:text-6xl font-light tracking-tight;
+  }
+
+  .heading-secondary {
+    @apply text-3xl md:text-4xl font-light tracking-tight;
+  }
+
+  .text-premium {
+    @apply text-lg leading-relaxed text-muted-foreground;
   }
 }
