@@ -35,7 +35,7 @@ const AboutSection = () => {
           {/* Content */}
           <div className="fade-in">
             <div className="mb-8">
-              <h3 className="text-2xl md:text-3xl font-light mb-6 text-primary">
+              <h3 className="text-2xl font-light mb-6 text-slate-50 md:text-3xl">
                 Three Decades of <span className="text-secondary">Engineering Excellence</span>
               </h3>
               <div className="space-y-6 text-premium">
@@ -55,11 +55,11 @@ const AboutSection = () => {
 
             {/* Managing Director Quote */}
             <div className="bg-primary/5 border-l-4 border-secondary p-6 rounded-r-lg">
-              <p className="text-lg italic text-primary mb-4">
+              <p className="text-lg italic mb-4 text-slate-200">
                 "Building and maintaining healthy relations with our customers is the heart of our business. 
                 We have a planning and management style that is consultative and systematic."
               </p>
-              <p className="font-semibold text-primary">
+              <p className="font-semibold text-slate-100">
                 - BM Ravishankar, Managing Director
               </p>
             </div>
@@ -75,7 +75,7 @@ const AboutSection = () => {
                     <value.icon className="w-8 h-8 text-secondary" />
                   </div>
                 </div>
-                <h4 className="text-xl font-semibold mb-3 text-primary">{value.title}</h4>
+                <h4 className="text-xl font-semibold mb-3 text-slate-50">{value.title}</h4>
                 <p className="text-muted-foreground leading-relaxed">{value.description}</p>
               </Card>)}
           </div>

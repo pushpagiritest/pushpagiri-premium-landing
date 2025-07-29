@@ -1,48 +1,38 @@
 import { Building2, Mountain, Factory, Route, Truck, Settings } from 'lucide-react';
 import { Card } from '@/components/ui/card';
-
 const ServicesSection = () => {
-  const services = [
-    {
-      icon: Building2,
-      title: 'Industrial Buildings (PEB)',
-      description: 'Cost-effective and long-lasting pre-engineered buildings customized to meet wide range of structural and aesthetic design requirements.',
-      features: ['Factories', 'Warehouses', 'Manufacturing Units', 'Storage Facilities']
-    },
-    {
-      icon: Mountain,
-      title: 'Mass Earth Work',
-      description: 'Strong foundation services including soil removal, cutting, filling, grading, backfilling, and complete site development solutions.',
-      features: ['Site Preparation', 'Land Grading', 'Excavation', 'Soil Management']
-    },
-    {
-      icon: Route,
-      title: 'Infrastructure Development',
-      description: 'Engineering vital connections through roads, external development, and layout development works that foster economic growth.',
-      features: ['Road Construction', 'Layout Development', 'External Infrastructure', 'Connectivity Solutions']
-    },
-    {
-      icon: Settings,
-      title: 'TAR Plant Operations',
-      description: 'Manufacturing high-quality asphalt solutions from our advanced plant, ensuring reliable and durable foundations for infrastructure.',
-      features: ['Asphalt Production', 'Quality Control', 'Material Supply', 'Technical Support']
-    },
-    {
-      icon: Factory,
-      title: 'Commercial Construction',
-      description: 'Constructing engines of commerce from sprawling facilities to adaptable structures, enabling innovation and productivity.',
-      features: ['Office Buildings', 'Commercial Complexes', 'Industrial Facilities', 'Mixed-Use Projects']
-    },
-    {
-      icon: Truck,
-      title: 'Project Management',
-      description: 'Comprehensive project management with consultative and systematic approach, ensuring timely delivery and quality execution.',
-      features: ['Planning & Design', 'Execution Management', 'Quality Assurance', 'Timeline Adherence']
-    }
-  ];
-
-  return (
-    <section id="services" className="section-padding">
+  const services = [{
+    icon: Building2,
+    title: 'Industrial Buildings (PEB)',
+    description: 'Cost-effective and long-lasting pre-engineered buildings customized to meet wide range of structural and aesthetic design requirements.',
+    features: ['Factories', 'Warehouses', 'Manufacturing Units', 'Storage Facilities']
+  }, {
+    icon: Mountain,
+    title: 'Mass Earth Work',
+    description: 'Strong foundation services including soil removal, cutting, filling, grading, backfilling, and complete site development solutions.',
+    features: ['Site Preparation', 'Land Grading', 'Excavation', 'Soil Management']
+  }, {
+    icon: Route,
+    title: 'Infrastructure Development',
+    description: 'Engineering vital connections through roads, external development, and layout development works that foster economic growth.',
+    features: ['Road Construction', 'Layout Development', 'External Infrastructure', 'Connectivity Solutions']
+  }, {
+    icon: Settings,
+    title: 'TAR Plant Operations',
+    description: 'Manufacturing high-quality asphalt solutions from our advanced plant, ensuring reliable and durable foundations for infrastructure.',
+    features: ['Asphalt Production', 'Quality Control', 'Material Supply', 'Technical Support']
+  }, {
+    icon: Factory,
+    title: 'Commercial Construction',
+    description: 'Constructing engines of commerce from sprawling facilities to adaptable structures, enabling innovation and productivity.',
+    features: ['Office Buildings', 'Commercial Complexes', 'Industrial Facilities', 'Mixed-Use Projects']
+  }, {
+    icon: Truck,
+    title: 'Project Management',
+    description: 'Comprehensive project management with consultative and systematic approach, ensuring timely delivery and quality execution.',
+    features: ['Planning & Design', 'Execution Management', 'Quality Assurance', 'Timeline Adherence']
+  }];
+  return <section id="services" className="section-padding">
       <div className="max-w-7xl mx-auto">
         {/* Header */}
         <div className="text-center mb-16 fade-in">
@@ -57,19 +47,16 @@ const ServicesSection = () => {
 
         {/* Services Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {services.map((service, index) => (
-            <Card 
-              key={service.title}
-              className="card-premium group cursor-pointer fade-in"
-              style={{ animationDelay: `${index * 0.1}s` }}
-            >
+          {services.map((service, index) => <Card key={service.title} className="card-premium group cursor-pointer fade-in" style={{
+          animationDelay: `${index * 0.1}s`
+        }}>
               <div className="mb-6">
                 <div className="w-16 h-16 bg-secondary/10 rounded-xl flex items-center justify-center group-hover:bg-secondary/20 transition-all duration-300 group-hover:scale-110">
                   <service.icon className="w-8 h-8 text-secondary" />
                 </div>
               </div>
               
-              <h3 className="text-xl font-semibold mb-4 text-primary group-hover:text-secondary transition-colors duration-300">
+              <h3 className="text-xl font-semibold mb-4 transition-colors duration-300 text-slate-50">
                 {service.title}
               </h3>
               
@@ -78,15 +65,12 @@ const ServicesSection = () => {
               </p>
               
               <div className="space-y-2">
-                {service.features.map((feature, idx) => (
-                  <div key={idx} className="flex items-center text-sm text-muted-foreground">
+                {service.features.map((feature, idx) => <div key={idx} className="flex items-center text-sm text-muted-foreground">
                     <div className="w-1.5 h-1.5 bg-secondary rounded-full mr-3 flex-shrink-0"></div>
                     {feature}
-                  </div>
-                ))}
+                  </div>)}
               </div>
-            </Card>
-          ))}
+            </Card>)}
         </div>
 
         {/* CTA Section */}
@@ -98,17 +82,14 @@ const ServicesSection = () => {
             <p className="text-xl mb-8 text-white/90">
               Let's discuss how we can bring your infrastructure vision to life.
             </p>
-            <button 
-              onClick={() => document.querySelector('#contact')?.scrollIntoView({ behavior: 'smooth' })}
-              className="btn-gold text-lg px-8 py-4"
-            >
+            <button onClick={() => document.querySelector('#contact')?.scrollIntoView({
+            behavior: 'smooth'
+          })} className="btn-gold text-lg px-8 py-4">
               Get Free Consultation
             </button>
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default ServicesSection;
