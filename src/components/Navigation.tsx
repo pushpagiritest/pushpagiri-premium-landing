@@ -36,7 +36,7 @@ const Navigation = () => {
         <div className="flex justify-between items-center h-20">
           {/* Logo */}
           <div className="flex-shrink-0">
-            <div className="text-2xl font-bold text-primary">
+            <div className="text-2xl font-bold text-white">
               PUSHPAGIRI
               <span className="text-secondary ml-1">INFRA</span>
             </div>
@@ -48,7 +48,7 @@ const Navigation = () => {
               <button
                 key={item.name}
                 onClick={() => scrollToSection(item.href)}
-                className="text-foreground hover:text-secondary transition-colors duration-300 font-medium"
+                className="text-white hover:text-secondary transition-colors duration-300 font-medium"
               >
                 {item.name}
               </button>
@@ -66,7 +66,7 @@ const Navigation = () => {
           <div className="md:hidden">
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="text-foreground hover:text-secondary transition-colors"
+              className="text-white hover:text-secondary transition-colors"
             >
               {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
             </button>
@@ -82,7 +82,7 @@ const Navigation = () => {
               <button
                 key={item.name}
                 onClick={() => scrollToSection(item.href)}
-                className="block w-full text-left px-3 py-2 text-base font-medium text-foreground hover:text-secondary transition-colors"
+                className="block w-full text-left px-3 py-2 text-base font-medium text-white hover:text-secondary transition-colors"
               >
                 {item.name}
               </button>
