@@ -66,7 +66,7 @@ const ProjectsSection = () => {
       <div className="max-w-7xl mx-auto">
         {/* Header */}
         <div className="text-center mb-16 fade-in">
-          <h2 className="heading-secondary mb-6">
+          <h2 className="heading-secondary mb-6 text-4xl">
             Our <span className="text-secondary">Portfolio</span>
           </h2>
           <p className="text-premium max-w-3xl mx-auto">
