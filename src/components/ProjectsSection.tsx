@@ -90,7 +90,7 @@ const ProjectsSection = () => {
 
         {/* Featured Projects */}
         <div className="mb-16">
-          <h3 className="text-2xl font-light text-center mb-12 fade-in text-slate-50 md:text-3xl">
+          <h3 className="text-2xl font-light text-center mb-12 fade-in text-slate-50 md:text-4xl">
             Featured <span className="text-secondary">Projects</span>
           </h3>
           
