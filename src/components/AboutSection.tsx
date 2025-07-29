@@ -67,9 +67,9 @@ const AboutSection = () => {
 
           {/* Values Grid */}
           <div className="grid sm:grid-cols-2 gap-6 fade-in">
-            {values.map((value, index) => <Card key={value.title} className="card-premium text-center group" style={{
+            {values.map((value, index) => <Card key={value.title} style={{
             animationDelay: `${index * 0.1}s`
-          }}>
+          }} className="card-premium text-center group bg-[#2f2f2f]/35">
                 <div className="mb-4">
                   <div className="w-16 h-16 bg-secondary/10 rounded-full flex items-center justify-center mx-auto group-hover:bg-secondary/20 transition-colors duration-300">
                     <value.icon className="w-8 h-8 text-secondary" />

@@ -47,9 +47,9 @@ const ServicesSection = () => {
 
         {/* Services Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {services.map((service, index) => <Card key={service.title} className="card-premium group cursor-pointer fade-in" style={{
+          {services.map((service, index) => <Card key={service.title} style={{
           animationDelay: `${index * 0.1}s`
-        }}>
+        }} className="card-premium group cursor-pointer fade-in bg-[#2f2f2f]/35">
               <div className="mb-6">
                 <div className="w-16 h-16 bg-secondary/10 rounded-xl flex items-center justify-center group-hover:bg-secondary/20 transition-all duration-300 group-hover:scale-110">
                   <service.icon className="w-8 h-8 text-secondary" />
