@@ -37,7 +37,7 @@ const ServicesSection = () => {
         {/* Header */}
         <div className="text-center mb-16 fade-in">
           <h2 className="heading-secondary mb-6">
-            Our <span className="text-secondary">Specializations</span>
+            Our <span className="text-secondary">Services</span>
           </h2>
           <p className="text-premium max-w-3xl mx-auto">
             From infrastructure projects to industrial buildings, we provide comprehensive 
