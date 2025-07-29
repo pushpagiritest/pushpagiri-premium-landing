@@ -1,34 +1,35 @@
 import { Phone, Mail, MapPin, ArrowUp } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-
 const Footer = () => {
   const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
   };
-
-  const quickLinks = [
-    { name: 'Home', href: '#home' },
-    { name: 'About', href: '#about' },
-    { name: 'Services', href: '#services' },
-    { name: 'Projects', href: '#projects' },
-    { name: 'Contact', href: '#contact' },
-  ];
-
-  const services = [
-    'Industrial Buildings (PEB)',
-    'Mass Earth Work',
-    'Infrastructure Development',
-    'TAR Plant Operations',
-    'Commercial Construction',
-    'Project Management'
-  ];
-
+  const quickLinks = [{
+    name: 'Home',
+    href: '#home'
+  }, {
+    name: 'About',
+    href: '#about'
+  }, {
+    name: 'Services',
+    href: '#services'
+  }, {
+    name: 'Projects',
+    href: '#projects'
+  }, {
+    name: 'Contact',
+    href: '#contact'
+  }];
+  const services = ['Industrial Buildings (PEB)', 'Mass Earth Work', 'Infrastructure Development', 'TAR Plant Operations', 'Commercial Construction', 'Project Management'];
   const scrollToSection = (href: string) => {
-    document.querySelector(href)?.scrollIntoView({ behavior: 'smooth' });
+    document.querySelector(href)?.scrollIntoView({
+      behavior: 'smooth'
+    });
   };
-
-  return (
-    <footer className="bg-primary text-white">
+  return <footer className="bg-primary text-white">
       {/* Main Footer */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -69,16 +70,11 @@ const Footer = () => {
           <div>
             <h4 className="text-lg font-semibold mb-6 text-secondary">Quick Links</h4>
             <ul className="space-y-3">
-              {quickLinks.map((link) => (
-                <li key={link.name}>
-                  <button
-                    onClick={() => scrollToSection(link.href)}
-                    className="text-white/80 hover:text-secondary transition-colors duration-300"
-                  >
+              {quickLinks.map(link => <li key={link.name}>
+                  <button onClick={() => scrollToSection(link.href)} className="text-white/80 hover:text-secondary transition-colors duration-300">
                     {link.name}
                   </button>
-                </li>
-              ))}
+                </li>)}
             </ul>
           </div>
 
@@ -86,13 +82,11 @@ const Footer = () => {
           <div>
             <h4 className="text-lg font-semibold mb-6 text-secondary">Our Services</h4>
             <ul className="space-y-3">
-              {services.map((service) => (
-                <li key={service}>
+              {services.map(service => <li key={service}>
                   <span className="text-white/80 text-sm leading-relaxed">
                     {service}
                   </span>
-                </li>
-              ))}
+                </li>)}
             </ul>
           </div>
         </div>
@@ -124,27 +118,19 @@ const Footer = () => {
       <div className="border-t border-white/20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
           <div className="flex flex-col md:flex-row justify-between items-center">
-            <div className="text-white/60 text-sm mb-4 md:mb-0">
-              © 2024 Pushpagiri Engineers Infra Pvt. Ltd. All rights reserved.
-            </div>
+            <div className="text-white/60 text-sm mb-4 md:mb-0">© 2025 Pushpagiri Engineers Infra Pvt. Ltd. All rights reserved.</div>
             
             <div className="flex items-center space-x-6">
               <span className="text-white/60 text-sm">
                 BM Ravishankar, Managing Director
               </span>
-              <Button
-                onClick={scrollToTop}
-                size="sm"
-                className="bg-secondary/20 hover:bg-secondary/30 text-secondary border border-secondary/30 rounded-full w-10 h-10 p-0"
-              >
+              <Button onClick={scrollToTop} size="sm" className="bg-secondary/20 hover:bg-secondary/30 text-secondary border border-secondary/30 rounded-full w-10 h-10 p-0">
                 <ArrowUp className="w-4 h-4" />
               </Button>
             </div>
           </div>
         </div>
       </div>
-    </footer>
-  );
+    </footer>;
 };
-
 export default Footer;
