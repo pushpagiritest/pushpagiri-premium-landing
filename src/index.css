@@ -155,9 +155,9 @@ All colors MUST be HSL.
     @apply bg-card/80 backdrop-blur-sm border border-border/50 rounded-2xl p-8 transition-all duration-500 hover:shadow-2xl hover:border-secondary/30;
   }
 
-  /* Section spacing */
+  /* Section spacing - improved mobile */
   .section-padding {
-    @apply py-20 px-4 sm:px-6 lg:px-8;
+    @apply py-12 px-4 sm:py-16 md:py-20 sm:px-6 lg:px-8;
   }
 
   /* Hero gradient overlay */
@@ -179,16 +179,16 @@ All colors MUST be HSL.
     @apply text-4xl md:text-5xl font-bold text-secondary;
   }
 
-  /* Premium typography */
+  /* Premium typography - mobile optimized */
   .heading-primary {
-    @apply text-4xl md:text-6xl font-light tracking-tight;
+    @apply text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-light tracking-tight;
   }
 
   .heading-secondary {
-    @apply text-3xl md:text-4xl font-light tracking-tight;
+    @apply text-2xl sm:text-3xl md:text-4xl font-light tracking-tight;
   }
 
   .text-premium {
-    @apply text-lg leading-relaxed text-muted-foreground;
+    @apply text-base sm:text-lg leading-relaxed text-muted-foreground;
   }
 }

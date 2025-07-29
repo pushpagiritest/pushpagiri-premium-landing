@@ -36,7 +36,7 @@ const Navigation = () => {
         <div className="flex justify-between items-center h-20">
           {/* Logo */}
           <div className="flex-shrink-0">
-            <div className="text-2xl font-bold text-white">
+            <div className="text-xl sm:text-2xl font-bold text-white">
               PUSHPAGIRI
               <span className="text-secondary ml-1">INFRA</span>
             </div>
@@ -77,7 +77,7 @@ const Navigation = () => {
         <div className={`md:hidden transition-all duration-300 ${
           isOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
         } overflow-hidden`}>
-          <div className="px-2 pt-2 pb-3 space-y-1 bg-background/95 backdrop-blur-md rounded-lg mt-2">
+          <div className="px-2 pt-2 pb-3 space-y-1 bg-primary/95 backdrop-blur-md rounded-lg mt-2 border border-white/10">
             {navItems.map((item) => (
               <button
                 key={item.name}
