@@ -8,15 +8,15 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    /* Premium Real Estate Design System - Dark & Elegant */
-    --background: 220 26% 8%;
-    --foreground: 0 0% 95%;
+    /* Premium Real Estate Design System */
+    --background: 0 0% 99%;
+    --foreground: 220 26% 14%;
 
-    --card: 220 26% 10%;
-    --card-foreground: 0 0% 95%;
+    --card: 0 0% 100%;
+    --card-foreground: 220 26% 14%;
 
-    --popover: 220 26% 10%;
-    --popover-foreground: 0 0% 95%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 220 26% 14%;
 
     /* Sophisticated navy as primary */
     --primary: 220 26% 14%;
@@ -27,17 +27,17 @@ All colors MUST be HSL.
     --secondary-foreground: 220 26% 14%;
 
     /* Soft neutrals */
-    --muted: 220 26% 15%;
-    --muted-foreground: 220 12% 65%;
+    --muted: 220 14% 96%;
+    --muted-foreground: 220 12% 45%;
 
     --accent: 45 86% 55%;
-    --accent-foreground: 220 26% 8%;
+    --accent-foreground: 220 26% 14%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 98%;
 
-    --border: 220 26% 20%;
-    --input: 220 26% 15%;
+    --border: 220 13% 91%;
+    --input: 220 13% 91%;
     --ring: 220 26% 14%;
 
     --radius: 0.75rem;
@@ -74,32 +74,32 @@ All colors MUST be HSL.
   }
 
   .dark {
-    --background: 220 26% 4%;
+    --background: 220 26% 6%;
     --foreground: 0 0% 98%;
 
-    --card: 220 26% 6%;
+    --card: 220 26% 8%;
     --card-foreground: 0 0% 98%;
 
-    --popover: 220 26% 6%;
+    --popover: 220 26% 8%;
     --popover-foreground: 0 0% 98%;
 
-    --primary: 220 26% 14%;
-    --primary-foreground: 0 0% 98%;
+    --primary: 0 0% 98%;
+    --primary-foreground: 220 26% 14%;
 
     --secondary: 45 86% 55%;
-    --secondary-foreground: 220 26% 4%;
+    --secondary-foreground: 220 26% 6%;
 
-    --muted: 220 26% 10%;
-    --muted-foreground: 220 12% 70%;
+    --muted: 220 26% 12%;
+    --muted-foreground: 220 12% 65%;
 
     --accent: 45 86% 55%;
-    --accent-foreground: 220 26% 4%;
+    --accent-foreground: 220 26% 6%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 98%;
 
-    --border: 220 26% 12%;
-    --input: 220 26% 12%;
+    --border: 220 26% 15%;
+    --input: 220 26% 15%;
     --ring: 45 86% 55%;
     --sidebar-background: 240 5.9% 10%;
     --sidebar-foreground: 240 4.8% 95.9%;
@@ -155,9 +155,9 @@ All colors MUST be HSL.
     @apply bg-card/80 backdrop-blur-sm border border-border/50 rounded-2xl p-8 transition-all duration-500 hover:shadow-2xl hover:border-secondary/30;
   }
 
-  /* Section spacing - improved mobile */
+  /* Section spacing */
   .section-padding {
-    @apply py-12 px-4 sm:py-16 md:py-20 sm:px-6 lg:px-8;
+    @apply py-20 px-4 sm:px-6 lg:px-8;
   }
 
   /* Hero gradient overlay */
@@ -179,16 +179,16 @@ All colors MUST be HSL.
     @apply text-4xl md:text-5xl font-bold text-secondary;
   }
 
-  /* Premium typography - mobile optimized */
+  /* Premium typography */
   .heading-primary {
-    @apply text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-light tracking-tight;
+    @apply text-4xl md:text-6xl font-light tracking-tight;
   }
 
   .heading-secondary {
-    @apply text-2xl sm:text-3xl md:text-4xl font-light tracking-tight;
+    @apply text-3xl md:text-4xl font-light tracking-tight;
   }
 
   .text-premium {
-    @apply text-base sm:text-lg leading-relaxed text-muted-foreground;
+    @apply text-lg leading-relaxed text-muted-foreground;
   }
 }
