@@ -29,16 +29,22 @@ const Navigation = () => {
   };
 
   return (
-    <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-      isScrolled ? 'bg-background/95 backdrop-blur-md shadow-lg' : 'bg-transparent'
+    <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
+      isScrolled 
+        ? 'bg-primary/98 backdrop-blur-md shadow-xl border-b border-secondary/20' 
+        : 'bg-transparent'
     }`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-20">
           {/* Logo */}
           <div className="flex-shrink-0">
-            <div className="text-2xl font-bold text-white">
+            <div className={`text-2xl font-bold transition-colors duration-500 ${
+              isScrolled ? 'text-white' : 'text-white'
+            } font-sans tracking-tight`}>
               PUSHPAGIRI
-              <span className="text-secondary ml-1">INFRA</span>
+              <span className={`ml-1 transition-colors duration-500 ${
+                isScrolled ? 'text-secondary' : 'text-secondary'
+              }`}>INFRA</span>
             </div>
           </div>
 
@@ -48,7 +54,11 @@ const Navigation = () => {
               <button
                 key={item.name}
                 onClick={() => scrollToSection(item.href)}
-                className="text-white hover:text-secondary transition-colors duration-300 font-medium"
+                className={`transition-all duration-500 font-medium tracking-wide ${
+                  isScrolled 
+                    ? 'text-white hover:text-secondary' 
+                    : 'text-white hover:text-secondary'
+                } hover:scale-105`}
               >
                 {item.name}
               </button>
