@@ -39,7 +39,7 @@ const Navigation = () => {
           {/* Logo */}
           <div className="flex-shrink-0">
             <div className={`text-2xl font-bold transition-colors duration-500 ${
-              isScrolled ? 'text-white' : 'text-white'
+              isScrolled ? 'text-primary' : 'text-white'
             } font-sans tracking-tight`}>
               PUSHPAGIRI
               <span className={`ml-1 transition-colors duration-500 ${
@@ -56,7 +56,7 @@ const Navigation = () => {
                 onClick={() => scrollToSection(item.href)}
                 className={`transition-all duration-500 font-medium tracking-wide ${
                   isScrolled 
-                    ? 'text-white hover:text-secondary' 
+                    ? 'text-primary hover:text-secondary' 
                     : 'text-white hover:text-secondary'
                 } hover:scale-105`}
               >
